@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title><%= title %></title>
+<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<header id="header">
+<h1><%= title %></h1>
+</header>
+<article>
+	<nav id="side">
+		<ul id="users">
+			<li> ユーザー名：<%= username %></li>
+		</ul>
+	</nav>
+	<main id="main" style="	overflow-y: scroll; ">
+		<div>
+			<ul id="messages">
+			</ul>
+		</div>
+	</main>
+</article>
+<footer id="footer">
+	<table>
+		<tr>
+			<td>メッセージ：</td>
+			<td><input id="input" type="text" placeholder="ここにメッセージを入力"></td>
+			<td><button id="submit">送信</button></td>
+		</tr>
+	</table>
+	<input id="username" type="hidden" value="<%= username %>">
+</footer>
+<script src="/javascripts/jquery-3.1.1.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/javascripts/client.js"></script>
+</body>
+</html>
