@@ -1,4 +1,4 @@
-# Spring Cource 2017 最終課題
+# express-chat
 
 ## 仕様
 * 最低限のチャット
@@ -16,7 +16,7 @@
 
 
 # How to use
-1. git clone https://github.com/akanekwon/express-chat.git
+1. git clone https://github.com/akanekwon172/express-chat.git
 2. cd express-chat
 3. npm install
 4. npm start

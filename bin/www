@@ -4,11 +4,9 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('../app').app;
 var debug = require('debug')('express-chat:server');
 var http = require('http');
-
-var sio = require('../models/socketio');
 
 /**
  * Get port from environment and store in Express.
@@ -21,13 +19,15 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+var server = require('../app').server;
 
 /**
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(port, function () {
+  console.log(`App succesfully started on ${port}`);
+});
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -90,5 +90,3 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
-
-sio(server);

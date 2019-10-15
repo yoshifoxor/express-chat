@@ -1,13 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-/* POST chat page. */
-router.post('/', function(req, res) {
-	console.log(req.body.username);
-	res.render('chat', {
-		title : 'Chat App',
-		username : req.body.username
-	});
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+  // res.io.emit("socketToMe", "users");
+  // res.send('respond with a resource');
+  res.render('chat', { title: 'Chat' });
 });
 
 module.exports = router;
