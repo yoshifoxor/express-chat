@@ -16,7 +16,7 @@
 
 
 # How to use
-1. git clone https://github.com/akanekwon172/express-chat.git
+1. git clone this repository.
 2. cd express-chat
 3. npm install
 4. npm start
